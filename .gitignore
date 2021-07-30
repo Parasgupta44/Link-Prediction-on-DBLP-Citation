@@ -4,3 +4,4 @@ notebooks/data/
 notebooks/notebooks/.ipynb_checkpoints/
 notebooks/notebooks/lp/.ipynb_checkpoints/
 *.json
+*.csv
