@@ -6,6 +6,8 @@ The project is using the following datasets for testing.
 
 Structure of these datasets can be found [here.](https://aminer.org/citation)
 
+**Note**: The neo4j queries can be found in ML notebooks which have been used many times in the GraphSAGE notebooks as well.
+
 ## Contents
 
 - [Introduction](#introduction)
@@ -49,21 +51,25 @@ Here we are using the following techniques to measure similarity measures to get
 
 The scores obtained from these techniques can be used alone to determine the links for future. For better performance, these features can be fed into some ML model to obtain the results. We are using Random Forest Classifier for the purpose (which will act as a binary classifier).
 
-The dataset is very large to process on a whole. So, we are using subsets of the data to perform our tasks. (Notebooks with larger sets of data will be added soon.)
+The dataset is very large to process on a whole. So, we are using subsets of the data to perform our tasks. (Notebooks with different sets of data have been added.)
 
 **Notebooks for the above techniques**
 - [`With 4 venues`](./notebooks/link_pred_12GB_4venues.ipynb)
 - [`With 6 venues`](./notebooks/link_pred_25GB_6venues.ipynb)
+- [`With 2 venues and TF-IDF, cosine similarity (Citation v11)`](./notebooks/fos_link_pred_25GB_2venues_with_TF_IDF.ipynb)
 
 -------------
 ## Deep Learning Techniques
 
 We will be leveraging power of Graph Neural Networks to achieve Link Predictions in our co-author Graph. We are using [`GraphSAGE`](http://snap.stanford.edu/graphsage/) implemented in [`stellargraph`](https://github.com/stellargraph/stellargraph) library for this.
 
-Notebook for the [`code`](./notebooks/GraphSAGE_Link_Pred.ipynb)
-Notebook for the [`extended_code`](./notebooks/GraphSAGE_LP_with_colab_feat.ipynb)
+The following notebooks has been added (Citation v11 used):
+- [Without LDA (Latent Dirichlet Allocation for topic modelling)](./GraphSAGE/noLDA)
+- [With LDA (larger feature set)](/GraphSAGE/LDA)
+- [Different metrics](/GraphSAGE/metrics)
+- [Author Recommendation](/GraphSAGE/Recommend)
+- [Weighted](/GraphSAGE/weighted)
 
-We are using a small portion of dataset for this on local machines. (Notebooks with bigger datasets will be updated soon)
 
 --------
 
